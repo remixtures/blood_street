@@ -1,6 +1,7 @@
 package org.academiadecodigo.alphabeat.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,11 +16,12 @@ public class Donor extends AbstractModel{
     private boolean diabetesStatus;
     private Integer weight;
     private List<Integer> ratings;
-    private Map<String, Sucker> reviews;
+    private Map<String, Integer> reviews;
     private boolean availability;
 
     public Donor(){
-        List<Integer> ratings = new ArrayList<>();
+        ratings = new ArrayList<>();
+        reviews = new HashMap<>();
     }
 
 
@@ -39,7 +41,7 @@ public class Donor extends AbstractModel{
         this.bloodType = bloodType;
     }
 
-    public boolean isHivStatus() {
+    public boolean isHivPositive() {
         return hivStatus;
     }
 
@@ -47,7 +49,7 @@ public class Donor extends AbstractModel{
         this.hivStatus = hivStatus;
     }
 
-    public boolean isDiabetesStatus() {
+    public boolean isDiabetic() {
         return diabetesStatus;
     }
 
@@ -67,15 +69,19 @@ public class Donor extends AbstractModel{
         return ratings;
     }
 
-    public Map<String, Sucker> getReviews() {
+    public void addRating(Integer rating) {
+        ratings.add(rating);
+    }
+
+    public Map<String, Integer> getReviews() {
         return reviews;
     }
 
-    public void setReviews(Map<String, Sucker> reviews) {
-        this.reviews = reviews;
+    public void addReview(String review, Integer suckerId) {
+        reviews.put(review, suckerId);
     }
 
-    public boolean isAvailability() {
+    public boolean isAvailable() {
         return availability;
     }
 

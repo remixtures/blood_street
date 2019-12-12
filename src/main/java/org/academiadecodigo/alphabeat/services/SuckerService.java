@@ -12,7 +12,7 @@ public interface SuckerService {
 
     Sucker getSucker(Integer id);
 
-    Sucker addSucker();
+    Sucker addSucker(Sucker sucker);
 
     void deleteSucker(Integer id);
 
@@ -20,15 +20,15 @@ public interface SuckerService {
 
     String writeReview(Integer donorId);
 
-    Integer addRating(Integer id, Integer rating);
+    Integer addRating(Integer id);
 
-    String registerFavoriteBloodType();
+    String registerFavoriteBloodType(Integer id, String bloodType);
 
-    void addFavoriteDonor(Integer id);
+    void addFavoriteDonor(Integer suckerId, Integer donorId);
 
-    void deleteFavoriteDonor(Integer id);
+    void deleteFavoriteDonor(Integer suckerId, Integer donorId);
 
-    List<Donor> listFavoriteDonors();
+    List<Donor> listFavoriteDonors(Integer id);
 
 
 

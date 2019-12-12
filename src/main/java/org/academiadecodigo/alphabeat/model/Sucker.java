@@ -34,8 +34,8 @@ public class Sucker extends AbstractModel {
         favoriteDonors.add(donor);
     }
 
-    public void removeFavoriteDonor(Integer id) {
-        favoriteDonors.remove(favoriteDonors.get(id));
+    public void removeFavoriteDonor(Donor donor) {
+        favoriteDonors.remove(donor);
     }
 
     public String getFavBloodType() {
