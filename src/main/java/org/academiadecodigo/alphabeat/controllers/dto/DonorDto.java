@@ -36,7 +36,7 @@ public class DonorDto {
         this.bloodType = bloodType;
     }
 
-    public boolean isHivStatus() {
+    public boolean isHivPositive() {
         return hivStatus;
     }
 
@@ -44,7 +44,7 @@ public class DonorDto {
         this.hivStatus = hivStatus;
     }
 
-    public boolean isDiabetesStatus() {
+    public boolean isDiabetic() {
         return diabetesStatus;
     }
 
@@ -76,7 +76,7 @@ public class DonorDto {
         this.reviews = reviews;
     }
 
-    public boolean isAvailability() {
+    public boolean isAvailable() {
         return availability;
     }
 

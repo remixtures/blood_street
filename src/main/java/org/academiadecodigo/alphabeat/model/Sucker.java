@@ -62,6 +62,10 @@ public class Sucker extends AbstractModel {
         numberOfRatings++;
     }
 
+    public void setFavoriteDonors(List<Donor> favoriteDonors) {
+        this.favoriteDonors = favoriteDonors;
+    }
+
     public void setNumberOfRatings(Integer numberOfRatings){
         this.numberOfRatings = numberOfRatings;
     }

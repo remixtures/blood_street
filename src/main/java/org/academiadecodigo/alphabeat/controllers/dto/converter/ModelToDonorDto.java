@@ -2,11 +2,13 @@ package org.academiadecodigo.alphabeat.controllers.dto.converter;
 
 import org.academiadecodigo.alphabeat.controllers.dto.DonorDto;
 import org.academiadecodigo.alphabeat.model.Donor;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by codecadet on 12/12/2019.
  */
-public class ModelToDonorDto {
+@Component
+public class ModelToDonorDto extends AbstractConverter<Donor, DonorDto> {
 
     public DonorDto convert(Donor donor){
 

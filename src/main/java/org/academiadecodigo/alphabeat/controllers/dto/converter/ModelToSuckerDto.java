@@ -2,11 +2,13 @@ package org.academiadecodigo.alphabeat.controllers.dto.converter;
 
 import org.academiadecodigo.alphabeat.controllers.dto.SuckerDto;
 import org.academiadecodigo.alphabeat.model.Sucker;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by codecadet on 12/12/2019.
  */
-public class ModelToSuckerDto {
+@Component
+public class ModelToSuckerDto extends AbstractConverter<Sucker, SuckerDto> {
 
     public SuckerDto convert(Sucker sucker){
 
