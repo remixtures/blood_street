@@ -6,8 +6,7 @@ import java.util.List;
 /**
  * Created by codecadet on 12/12/2019.
  */
-public class Sucker {
-
+public class Sucker extends AbstractModel {
 
     private String password;
     private List<Donor> favoriteDonors;
