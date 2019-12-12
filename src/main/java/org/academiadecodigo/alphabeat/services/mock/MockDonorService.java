@@ -2,6 +2,7 @@ package org.academiadecodigo.alphabeat.services.mock;
 
 import org.academiadecodigo.alphabeat.model.Donor;
 import org.academiadecodigo.alphabeat.services.DonorService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Map;
 /**
  * Created by codecadet on 12/12/2019.
  */
+@Service
 public class MockDonorService extends AbstractMockService<Donor> implements DonorService{
 
 

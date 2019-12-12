@@ -3,6 +3,7 @@ package org.academiadecodigo.alphabeat.services.mock;
 import org.academiadecodigo.alphabeat.model.Donor;
 import org.academiadecodigo.alphabeat.model.Sucker;
 import org.academiadecodigo.alphabeat.services.SuckerService;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * Created by codecadet on 12/12/2019.
  */
+@Service
 public class MockSuckerService extends AbstractMockService<Sucker> implements SuckerService{
 
     private MockDonorService donorService;

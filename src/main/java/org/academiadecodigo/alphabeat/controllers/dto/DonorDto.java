@@ -1,14 +1,12 @@
-package org.academiadecodigo.alphabeat.model;
+package org.academiadecodigo.alphabeat.controllers.dto;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
  * Created by codecadet on 12/12/2019.
  */
-public class Donor extends AbstractModel{
+public class DonorDto {
 
     private Integer age;
     private String password;
@@ -19,11 +17,7 @@ public class Donor extends AbstractModel{
     private List<Integer> ratings;
     private Map<String, Integer> reviews;
     private boolean availability;
-
-    public Donor(){
-        ratings = new ArrayList<>();
-        reviews = new HashMap<>();
-    }
+    private Integer id;
 
 
     public Integer getAge() {
@@ -42,7 +36,7 @@ public class Donor extends AbstractModel{
         this.bloodType = bloodType;
     }
 
-    public boolean isHivPositive() {
+    public boolean isHivStatus() {
         return hivStatus;
     }
 
@@ -50,7 +44,7 @@ public class Donor extends AbstractModel{
         this.hivStatus = hivStatus;
     }
 
-    public boolean isDiabetic() {
+    public boolean isDiabetesStatus() {
         return diabetesStatus;
     }
 
@@ -70,24 +64,32 @@ public class Donor extends AbstractModel{
         return ratings;
     }
 
-    public void addRating(Integer rating) {
-        ratings.add(rating);
+    public void setRatings(List<Integer> ratings) {
+        this.ratings = ratings;
     }
 
     public Map<String, Integer> getReviews() {
         return reviews;
     }
 
-    public void addReview(String review, Integer suckerId) {
-        reviews.put(review, suckerId);
+    public void setReviews(Map<String, Integer> reviews) {
+        this.reviews = reviews;
     }
 
-    public boolean isAvailable() {
+    public boolean isAvailability() {
         return availability;
     }
 
     public void setAvailability(boolean availability) {
         this.availability = availability;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getPassword() {

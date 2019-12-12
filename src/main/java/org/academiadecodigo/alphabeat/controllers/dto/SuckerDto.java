@@ -1,22 +1,20 @@
-package org.academiadecodigo.alphabeat.model;
+package org.academiadecodigo.alphabeat.controllers.dto;
 
-import java.util.ArrayList;
+import org.academiadecodigo.alphabeat.model.Donor;
+
 import java.util.List;
 
 /**
  * Created by codecadet on 12/12/2019.
  */
-public class Sucker extends AbstractModel {
+public class SuckerDto {
 
     private String password;
     private List<Donor> favoriteDonors;
     private String favBloodType;
     private String email;
     private Integer numberOfRatings;
-
-    public Sucker() {
-        favoriteDonors = new ArrayList<>();
-    }
+    private Integer id;
 
     public String getPassword() {
         return password;
@@ -30,12 +28,8 @@ public class Sucker extends AbstractModel {
         return favoriteDonors;
     }
 
-    public void addFavoriteDonor(Donor donor) {
-        favoriteDonors.add(donor);
-    }
-
-    public void removeFavoriteDonor(Donor donor) {
-        favoriteDonors.remove(donor);
+    public void setFavoriteDonors(List<Donor> favoriteDonors) {
+        this.favoriteDonors = favoriteDonors;
     }
 
     public String getFavBloodType() {
@@ -58,11 +52,15 @@ public class Sucker extends AbstractModel {
         return numberOfRatings;
     }
 
-    public void addRating() {
-        numberOfRatings++;
+    public void setNumberOfRatings(Integer numberOfRatings) {
+        this.numberOfRatings = numberOfRatings;
     }
 
-    public void setNumberOfRatings(Integer numberOfRatings){
-        this.numberOfRatings = numberOfRatings;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }
