@@ -1,8 +1,8 @@
 package org.academiadecodigo.alphabeat.services;
 
-import org.academiadecodigo.alphabeat.model.Donor;
-import org.academiadecodigo.alphabeat.model.Sucker;
-import org.academiadecodigo.alphabeat.model.choices.BloodType;
+import org.academiadecodigo.alphabeat.persistence.model.Donor;
+import org.academiadecodigo.alphabeat.persistence.model.Sucker;
+import org.academiadecodigo.alphabeat.persistence.model.choices.BloodType;
 
 import java.util.List;
 

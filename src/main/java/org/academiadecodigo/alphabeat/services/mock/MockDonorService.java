@@ -1,6 +1,6 @@
 package org.academiadecodigo.alphabeat.services.mock;
 
-import org.academiadecodigo.alphabeat.model.Donor;
+import org.academiadecodigo.alphabeat.persistence.model.Donor;
 import org.academiadecodigo.alphabeat.services.DonorService;
 import org.springframework.stereotype.Service;
 

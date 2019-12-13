@@ -1,4 +1,4 @@
-package org.academiadecodigo.alphabeat.model;
+package org.academiadecodigo.alphabeat.persistence.model;
 
 /**
  * Created by codecadet on 12/12/2019.

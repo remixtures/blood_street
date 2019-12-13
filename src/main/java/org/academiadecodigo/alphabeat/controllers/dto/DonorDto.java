@@ -1,7 +1,6 @@
 package org.academiadecodigo.alphabeat.controllers.dto;
 
-import org.academiadecodigo.alphabeat.model.choices.BloodType;
-import org.academiadecodigo.alphabeat.model.choices.Gender;
+import org.academiadecodigo.alphabeat.persistence.model.choices.BloodType;
 
 import javax.validation.constraints.*;
 import java.util.List;

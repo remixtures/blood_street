@@ -1,7 +1,6 @@
-package org.academiadecodigo.alphabeat.model;
+package org.academiadecodigo.alphabeat.persistence.model;
 
-import org.academiadecodigo.alphabeat.model.choices.BloodType;
-import org.academiadecodigo.alphabeat.model.choices.Gender;
+import org.academiadecodigo.alphabeat.persistence.model.choices.BloodType;
 
 import java.util.ArrayList;
 import java.util.List;

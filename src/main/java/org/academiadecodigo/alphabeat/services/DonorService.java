@@ -1,6 +1,6 @@
 package org.academiadecodigo.alphabeat.services;
 
-import org.academiadecodigo.alphabeat.model.Donor;
+import org.academiadecodigo.alphabeat.persistence.model.Donor;
 
 import java.util.List;
 import java.util.Map;

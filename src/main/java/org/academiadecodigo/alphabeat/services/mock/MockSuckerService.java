@@ -1,8 +1,8 @@
 package org.academiadecodigo.alphabeat.services.mock;
 
-import org.academiadecodigo.alphabeat.model.Donor;
-import org.academiadecodigo.alphabeat.model.Sucker;
-import org.academiadecodigo.alphabeat.model.choices.BloodType;
+import org.academiadecodigo.alphabeat.persistence.model.Donor;
+import org.academiadecodigo.alphabeat.persistence.model.Sucker;
+import org.academiadecodigo.alphabeat.persistence.model.choices.BloodType;
 import org.academiadecodigo.alphabeat.services.SuckerService;
 import org.springframework.stereotype.Service;
 

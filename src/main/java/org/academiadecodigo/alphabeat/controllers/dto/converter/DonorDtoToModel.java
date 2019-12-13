@@ -1,7 +1,7 @@
 package org.academiadecodigo.alphabeat.controllers.dto.converter;
 
 import org.academiadecodigo.alphabeat.controllers.dto.DonorDto;
-import org.academiadecodigo.alphabeat.model.Donor;
+import org.academiadecodigo.alphabeat.persistence.model.Donor;
 import org.academiadecodigo.alphabeat.services.DonorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

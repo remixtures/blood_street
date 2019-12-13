@@ -1,4 +1,4 @@
-package org.academiadecodigo.alphabeat.model;
+package org.academiadecodigo.alphabeat.persistence.model;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

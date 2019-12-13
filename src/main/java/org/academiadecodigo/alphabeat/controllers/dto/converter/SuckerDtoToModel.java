@@ -1,7 +1,7 @@
 package org.academiadecodigo.alphabeat.controllers.dto.converter;
 
 import org.academiadecodigo.alphabeat.controllers.dto.SuckerDto;
-import org.academiadecodigo.alphabeat.model.Sucker;
+import org.academiadecodigo.alphabeat.persistence.model.Sucker;
 import org.academiadecodigo.alphabeat.services.SuckerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
