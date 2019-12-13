@@ -43,6 +43,11 @@ public class SuckerProfileController {
         return "sucker.html";
     }
 
+    @RequestMapping(method = RequestMethod.GET, value = {"/css/blood.css"})
+    public String showSuckerProfileCss(){
+        return "/css/blood.css";
+    }
+
     @RequestMapping(method = RequestMethod.GET, value = "/edit/{id}")
     public String showEdit(@PathVariable Integer id, Model model) {
 

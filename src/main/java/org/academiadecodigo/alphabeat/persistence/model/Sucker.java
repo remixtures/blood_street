@@ -2,12 +2,11 @@ package org.academiadecodigo.alphabeat.persistence.model;
 
 import org.academiadecodigo.alphabeat.persistence.model.choices.BloodType;
 
+import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by codecadet on 12/12/2019.
- */
+@Entity
 public class Sucker extends AbstractModel {
 
     private String firstName;

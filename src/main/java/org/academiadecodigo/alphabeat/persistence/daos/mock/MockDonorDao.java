@@ -1,13 +1,16 @@
 package org.academiadecodigo.alphabeat.persistence.daos.mock;
 
+import org.academiadecodigo.alphabeat.persistence.daos.DonorDao;
 import org.academiadecodigo.alphabeat.persistence.model.Donor;
 import org.academiadecodigo.alphabeat.persistence.model.choices.BloodType;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MockDonorDao extends GenericDao<Donor>{
+public class MockDonorDao extends GenericDao<Donor> implements DonorDao{
 
-    public MockDonorDao(Class<Donor> modelType) {
+    @Autowired
+    public MockDonorDao() {
         super(Donor.class);
 
         modelMap.put(1, createDonor(1,"username","firstname", "lastname", 21, BloodType.A_POSITIVE, true, true,100,true, "sadboi@email.com"));

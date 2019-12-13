@@ -1,12 +1,14 @@
 package org.academiadecodigo.alphabeat.persistence.daos.mock;
 
+import org.academiadecodigo.alphabeat.persistence.daos.SuckerDao;
 import org.academiadecodigo.alphabeat.persistence.model.Sucker;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MockSuckerDao extends GenericDao<Sucker>{
+public class MockSuckerDao extends GenericDao<Sucker> implements SuckerDao{
 
-
+    @Autowired
     public MockSuckerDao() {
         super(Sucker.class);
 
