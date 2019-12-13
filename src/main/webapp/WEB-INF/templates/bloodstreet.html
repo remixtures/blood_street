@@ -9,8 +9,8 @@
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
 </head>
 
 <body>
@@ -77,8 +77,8 @@
                         </a>
                     </div>
                     <div class="progress margin-bottom">
-                        <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5%"
-                            aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5%" aria-valuemin="0"
+                            aria-valuemax="100"></div>
                     </div>
                 </div>
                 <div class="col">
@@ -115,8 +115,8 @@
                         <h6>Sucker name</h6>
                     </div>
                     <div class="progress margin-bottom">
-                        <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5%"
-                            aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5%" aria-valuemin="0"
+                            aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
@@ -148,45 +148,51 @@
                 </div>
             </footer>
         </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
             crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
             crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
 
-        <script>
+        <script th:inline="javascript">
             // Initialize and add the map
             function initMap() {
-                // The location of Uluru
-                var uluru = { lat: 38.714982, lng: -9.1459007 };
-                var b = { lat: 38.715, lng: -9.144 };
-                var c = { lat: 38.713, lng: -9.146 };
-
-                // The map, centered at Uluru
-                var map = new google.maps.Map(
-                    document.getElementById('map'), { zoom: 15, center: uluru });
+                var here = { lat: 38.714982, lng: -9.1459007 };
 
                 var map = new google.maps.Map(
-                    document.getElementById('map'), { zoom: 15, center: b });
+                    document.getElementById('map'), { zoom: 15, center: here });
 
-                var map = new google.maps.Map(
-                    document.getElementById('map'), { zoom: 15, center: c });
-                // The marker, positioned at Uluru
-                var marker = new google.maps.Marker({ position: uluru, map: map, icon: image });
-                var marker = new google.maps.Marker({ position: c, map: map, icon: image });
-                var marker = new google.maps.Marker({ position: b, map: map, icon: image });
+                var marker = new google.maps.Marker({ position: here, map: map });
 
-                var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+                /*[# th:each="donor : ${donors}"]*/
+
+                var l = new google.maps.LatLng(/*[[${donor.lat}]]*/);
+                var marker = new google.maps.Marker({ position: l, map: map, icon: image });
+
+                var contentString = '<h1>/*[[${donor.name}]]*/</h1>' +
+                    '<p>Age: /*[[${donor.age}]]*/</p>' +
+                    '<p>Blood type: /*[[${donor.bloodType}]]*/</p>' +
+                    '<p>HIV status: /*[[${donor.hivStatus}]]*/</p>' +
+                    '<p>Diabetes status: /*[[${donor.diabetesStatus}]]*/</p>' +
+                    '<p>Weight: /*[[${donor.diabetesStatus}]]*/</p>'
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker);
+                });
+
+                /*[/]*/
+
+                var image = 'https://freesvg.org/img/blood-clipart.png';
 
             }
         </script>
-        <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQhgENQih6dYyJ__WrsKvwSSMpF1iIk4k&callback=initMap">
-            </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQhgENQih6dYyJ__WrsKvwSSMpF1iIk4k&callback=initMap">
+        </script>
 
 </body>
 
