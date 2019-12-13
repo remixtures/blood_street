@@ -6,28 +6,37 @@
     <title>BloodStreet</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link type="text/css" rel="stylesheet" href="css/blood.css"/>
+    <link type="text/css" rel="stylesheet" href="css/blood.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="username">
-        <h1>Username</h1>
-    </div>
-    <div class="row">
-    <div class="profile-pic">
-        <img src="resources/donor-200x194.png">
-    </div>
-    <div class="switch-lg">
-        <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="switch">
-            <label class="custom-control-label" for="switch">Available for donation</label>
+
+    <div class="container-fluid navigation">
+        <div>
+            <img class="logo" src="resources/logo.png" />
         </div>
     </div>
-</div>
+
+    <div class="container">
+        <div class="text-center">
+            <img src="resources/default-80x80.png" class="img img-rounded img-fluid" />
+        </div>
+        
+        <div class="content">
+            <h1>Donor name</h1>
+            <a class="editprofile" href="edit.html">edit profile</a>
+        </div>
+        <div class="switch-lg">
+                <div class="custom-control custom-switch margin-top-bottom">
+                    <input type="checkbox" class="custom-control-input" id="switch">
+                    <label class="custom-control-label" for="switch">Available for donation</label>
+                </div>
+            </div>
+    </div>
 
 
     <div class="reviews">
@@ -35,12 +44,11 @@
 
         <div class="container">
 
-
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-2">
-                            <img src="resources/default-80x80.png" class="img img-rounded img-fluid" />
+                            <img src="resources/avatar.png" class="img img-rounded img-fluid" />
                             <p class="text-secondary text-center">December 12, 2019</p>
                         </div>
                         <div class="col-md-10">
