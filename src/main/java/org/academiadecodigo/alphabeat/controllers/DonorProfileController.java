@@ -29,10 +29,23 @@ public class DonorProfileController {
     @RequestMapping(method = RequestMethod.GET, value = {"/{id}"})
     public String showDonorProfile(@PathVariable Integer id, Model model){
 
+        //authentication
 
+        model.addAttribute("donor", modelToDonorDto.convert(donorService.getDonor(id)));
 
         return "/donor/profile";
     }
+
+    @RequestMapping(method = RequestMethod.GET, path = "/edit/{id}}")
+    public String showEdit(@PathVariable Integer id, Model model){
+
+        model.addAttribute("donor", modelToDonorDto.convert(donorService.getDonor(id)));
+
+        return "/donor/edit";
+    }
+
+
+
 
 
 

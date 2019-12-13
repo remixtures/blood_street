@@ -9,9 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MainController {
 
 
+
     @RequestMapping(method = RequestMethod.GET, value = {"/", "/home", ""})
     public String landing() {
         return "redirect:/bloodstreet";
     }
+
+
 
 }

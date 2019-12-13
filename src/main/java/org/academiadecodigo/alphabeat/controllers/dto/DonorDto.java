@@ -1,5 +1,9 @@
 package org.academiadecodigo.alphabeat.controllers.dto;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.util.List;
 import java.util.Map;
 
@@ -8,8 +12,17 @@ import java.util.Map;
  */
 public class DonorDto {
 
+    @NotNull(message = "Please insert your age")
+    @NotBlank(message = "Please insert your age")
+    @Pattern(regexp = "\\s[0-9]{1}[0-9]{0,1}", message = "Please input an age between 0 and ")
     private Integer age;
+
+    @NotBlank(message = "Invalid Password")
+    @NotNull(message = "Invalid Password")
+    @Size(min=4, max=16, message = "Password must have at least 4 characters, no more than 16")
     private String password;
+
+
     private String bloodType;
     private boolean hivStatus;
     private boolean diabetesStatus;
