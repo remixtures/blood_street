@@ -16,7 +16,6 @@ public class Donor extends AbstractModel{
     private String firstName;
     private String lastName;
     private String userName;
-    private Gender gender;
 
     private Integer age;
     private String password;
@@ -139,11 +138,4 @@ public class Donor extends AbstractModel{
         this.firstName = firstName;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
 }

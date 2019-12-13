@@ -22,7 +22,7 @@ public class SuckerDtoToModel extends AbstractConverter<SuckerDto, Sucker>{
         sucker.setUserName(suckerDto.getUserName());
         sucker.setFirstName(suckerDto.getFirstName());
         sucker.setLastName(suckerDto.getLastName());
-        sucker.setGender(suckerDto.getGender());
+
 
         sucker.setPassword(suckerDto.getPassword());
         sucker.setFavBloodType(suckerDto.getFavBloodType());

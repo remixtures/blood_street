@@ -17,7 +17,7 @@ public class ModelToDonorDto extends AbstractConverter<Donor, DonorDto> {
         donorDto.setUserName(donor.getUserName());
         donorDto.setFirstName(donor.getFirstName());
         donorDto.setLastName(donor.getLastName());
-        donorDto.setGender(donor.getGender());
+
 
         donorDto.setAge(donor.getAge());
         donorDto.setBloodType(donor.getBloodType());

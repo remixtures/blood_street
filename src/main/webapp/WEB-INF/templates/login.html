@@ -2,7 +2,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <!-- <thymeleaf th:replace="header :: header" /> -->
     <title>BloodStreet</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,11 +50,11 @@
                                                 id="form-username">
                                         </div>
                                         <div class="form-group">
-                                            <label class="sr-only" for="form-password">Password</label>
+                                            <label class="sr-only" for="form-login-password">Password</label>
                                             <input type="password" name="form-password" placeholder="Password" class="form-password form-control"
-                                                id="form-password">
+                                                id="form-login-password">
                                         </div>
-                                        <button type="submit" class="register-btn btn button-blood text-white">Sign in!</button>
+                                        <button type="submit" class="margin-bottom register-btn btn button-blood text-white">Sign in!</button>
                                     </form>
                                 </div>
                             </div>
@@ -84,22 +83,26 @@
                                     </div>
                                 </div>
                                 <div class="form-bottom">
-                                    <form role="form" action="" method="post" class="registration-form">
+                                    <form role="form" action="" method="post" class="registration-form" th:object="${sucker}" th:action="@{/sucker}">
+                                        <input type="hidden" th:field="*{id}"/>
                                         <div class="form-group">
                                             <label class="sr-only" for="form-first-name">First name</label>
                                             <input type="text" name="form-first-name" placeholder="First name" class="form-first-name form-control"
                                                 id="form-first-name">
+                                            <span class="help-block" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">First Name error messages</span>
                                         </div>
                                         <div class="form-group">
                                             <label class="sr-only" for="form-last-name">Last name</label>
                                             <input type="text" name="form-last-name" placeholder="Last name" class="form-last-name form-control"
                                                 id="form-last-name">
+                                            <span class="help-block" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">First Name error messages</span>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="sr-only" for="form-last-name">Username</label>
                                             <input type="text" name="form-user-name" placeholder="Username" class="form-last-name form-control"
                                                 id="form-user-name">
+                                            <span class="help-block" th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}">First Name error messages</span>
                                         </div>
 
 
@@ -107,28 +110,22 @@
                                             <label class="sr-only" for="form-email">Email</label>
                                             <input type="text" name="form-email" placeholder="Email" class="form-email form-control"
                                                 id="form-email">
+                                            <span class="help-block" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">First Name error messages</span>
                                         </div>
 
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                                value="option1" checked>
-                                            <label class="form-check-label" for="exampleRadios1">
-                                                Register as Donor
-                                            </label>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-reg-password">Password</label>
+                                            <input type="password" name="form-password" placeholder="password" class="form-password form-control"
+                                                id="form-reg-password">
+                                            <span class="help-block" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">First Name error messages</span>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                                value="option2">
-                                            <label class="form-check-label" for="exampleRadios2">
-                                                Register as Sucker
-                                            </label>
-                                        </div>
+                                        <button type="button" class="register-btn btn btn-info">Sign up as donor</button>
+                                        <button type="submit" class="register-btn text-white btn button-blood float-right" name="action" value="save">Sign up as sucker</button>
 
+
+                                </form>
                                 </div>
 
-                                <button type="submit" class="register-btn btn button-blood text-white float-right">Sign
-                                    up!</button>
-                                </form>
                             </div>
                         </div>
 
@@ -137,6 +134,7 @@
 
             </div>
         </div>
+
 
     </div>
 

@@ -22,7 +22,7 @@ public class DonorDtoToModel extends AbstractConverter<DonorDto, Donor> {
         donor.setUserName(donorDto.getUserName());
         donor.setFirstName(donorDto.getFirstName());
         donor.setLastName(donorDto.getLastName());
-        donor.setGender(donorDto.getGender());
+
 
         donor.setAge(donorDto.getAge());
         donor.setPassword(donorDto.getPassword());

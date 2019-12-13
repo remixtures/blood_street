@@ -14,7 +14,6 @@ public class Sucker extends AbstractModel {
     private String firstName;
     private String lastName;
     private String userName;
-    private Gender gender;
 
     private String password;
     private List<Donor> favoriteDonors;
@@ -102,11 +101,4 @@ public class Sucker extends AbstractModel {
         this.firstName = firstName;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
 }

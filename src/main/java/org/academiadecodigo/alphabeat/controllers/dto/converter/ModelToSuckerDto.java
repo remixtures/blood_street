@@ -17,7 +17,7 @@ public class ModelToSuckerDto extends AbstractConverter<Sucker, SuckerDto> {
         suckerDto.setUserName(sucker.getUserName());
         suckerDto.setFirstName(sucker.getFirstName());
         suckerDto.setLastName(sucker.getLastName());
-        suckerDto.setGender(sucker.getGender());
+
 
         suckerDto.setEmail(sucker.getEmail());
         suckerDto.setPassword(sucker.getPassword());

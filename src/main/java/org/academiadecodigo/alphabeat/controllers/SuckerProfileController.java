@@ -5,14 +5,18 @@ import org.academiadecodigo.alphabeat.controllers.dto.converter.DonorDtoToModel;
 import org.academiadecodigo.alphabeat.controllers.dto.converter.ModelToDonorDto;
 import org.academiadecodigo.alphabeat.controllers.dto.converter.ModelToSuckerDto;
 import org.academiadecodigo.alphabeat.controllers.dto.converter.SuckerDtoToModel;
+import org.academiadecodigo.alphabeat.model.Sucker;
 import org.academiadecodigo.alphabeat.services.SuckerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.validation.Valid;
 
 /**
  * Created by codecadet on 12/12/2019.
@@ -34,9 +38,9 @@ public class SuckerProfileController {
 
         //authentication
 
-        model.addAttribute("donor", modelToSuckerDto.convert(suckerService.getSucker(id)));
+        model.addAttribute("sucker", modelToSuckerDto.convert(suckerService.getSucker(id)));
 
-        return "/sucker/profile";
+        return "sucker.html";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/edit/{id}")
@@ -47,11 +51,12 @@ public class SuckerProfileController {
         return "/sucker/edit";
     }
 
-    @RequestMapping(method = RequestMethod.PUT, value = "/")
-    public String editSucker(@ModelAttribute SuckerDto suckerDto) {
+    @RequestMapping(method = RequestMethod.POST, value = "/", params = "actions=save")
+    public String addSucker(@Valid @ModelAttribute SuckerDto suckerDto, BindingResult bindingResult) {
 
+        Sucker sucker = suckerService.addSucker(suckerDtoToModel.convert(suckerDto));
 
-        return "redirect: / ";
+        return "redirect:/sucker/" + sucker.getId();
     }
 
 

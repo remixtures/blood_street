@@ -31,9 +31,7 @@ public class SuckerDto {
     @Pattern(regexp = "[A-Z][a-z]{2,15}", message = "Names must only contain letters")
     private String lastName;
 
-    @NotNull(message = "Please choose an option")
-    @NotBlank(message = "Please choose an option")
-    private Gender gender;
+
 
     @NotBlank(message = "Invalid Password")
     @NotNull(message = "Invalid Password")
@@ -123,11 +121,4 @@ public class SuckerDto {
         this.lastName = lastName;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
 }
