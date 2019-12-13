@@ -15,4 +15,6 @@
     <!-- Base package to search for spring beans -->
     <context:component-scan base-package="org.academiadecodigo.alphabeat"/>
 
+    <import resource="presentation.xml"/>
+
 </beans>

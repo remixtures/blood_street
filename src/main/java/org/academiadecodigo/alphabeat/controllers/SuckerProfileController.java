@@ -51,7 +51,7 @@ public class SuckerProfileController {
     public String editSucker(@ModelAttribute SuckerDto suckerDto) {
 
 
-        return "redirect: / "
+        return "redirect: / ";
     }
 
 

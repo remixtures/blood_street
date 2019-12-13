@@ -175,7 +175,7 @@
         <configuration>
           <url>http://localhost:8080/manager/text</url>
           <server>tomcat</server>
-          <path>/blomato</path>
+          <path>/bloodstreet</path>
         </configuration>
       </plugin>
 

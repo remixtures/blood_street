@@ -2,6 +2,7 @@ package org.academiadecodigo.alphabeat.services.mock;
 
 import org.academiadecodigo.alphabeat.model.Donor;
 import org.academiadecodigo.alphabeat.model.Sucker;
+import org.academiadecodigo.alphabeat.model.choices.BloodType;
 import org.academiadecodigo.alphabeat.services.SuckerService;
 import org.springframework.stereotype.Service;
 
@@ -50,7 +51,7 @@ public class MockSuckerService extends AbstractMockService<Sucker> implements Su
     }
 
     @Override
-    public String registerFavoriteBloodType(Integer id, String bloodType) {
+    public BloodType registerFavoriteBloodType(Integer id, BloodType bloodType) {
         Sucker sucker = modelMap.get(id);
         sucker.setFavBloodType(bloodType);
         return sucker.getFavBloodType();

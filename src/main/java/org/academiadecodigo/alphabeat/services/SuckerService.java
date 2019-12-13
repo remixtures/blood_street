@@ -2,6 +2,7 @@ package org.academiadecodigo.alphabeat.services;
 
 import org.academiadecodigo.alphabeat.model.Donor;
 import org.academiadecodigo.alphabeat.model.Sucker;
+import org.academiadecodigo.alphabeat.model.choices.BloodType;
 
 import java.util.List;
 
@@ -22,7 +23,7 @@ public interface SuckerService {
 
     Integer addRating(Integer id);
 
-    String registerFavoriteBloodType(Integer id, String bloodType);
+    BloodType registerFavoriteBloodType(Integer id, BloodType bloodType);
 
     void addFavoriteDonor(Integer suckerId, Integer donorId);
 
