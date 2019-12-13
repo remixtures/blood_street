@@ -6,10 +6,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link type="text/css" rel="stylesheet" href="css/blood.css" />
-
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime:400i,700|Sahitya:700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -20,7 +22,7 @@
                 <img class="logo" src="resources/logo.png" />
             </div>
         </div>
-        <div class="header">
+        <div class="donorheader">
 
         </div>
         <div class="top-content">
@@ -38,7 +40,7 @@
                             <div class="form">
                                 <div class="form-top">
                                     <div class="form-top-left">
-                                        <h3>Login to Bloodstreet</h3>
+                                        <h3>Login </h3>
                                     </div>
 
                                 </div>
@@ -46,21 +48,22 @@
                                     <form role="form" action="" method="post" class="login-form">
                                         <div class="form-group">
                                             <label class="sr-only" for="form-username">Username</label>
-                                            <input type="text" name="form-username" placeholder="Username" class="form-username form-control"
-                                                id="form-username">
+                                            <input type="text" name="form-username" placeholder="Username"
+                                                class="form-username form-control" id="form-username">
                                         </div>
                                         <div class="form-group">
                                             <label class="sr-only" for="form-password">Password</label>
-                                            <input type="password" name="form-password" placeholder="Password" class="form-password form-control"
-                                                id="form-password">
+                                            <input type="password" name="form-password" placeholder="Password"
+                                                class="form-password form-control" id="form-password">
                                         </div>
-                                        <button type="submit" class="margin-bottom register-btn btn button-blood text-white">Sign in!</button>
+                                        <button type="submit"
+                                            class="margin-bottom register-btn btn btn-info text-white">Sign in!</button>
                                     </form>
                                 </div>
                             </div>
 
                             <div class="social-login">
-                                <h3>Or login with:</h3>
+                                <h4 class="text-center">or</h4>
                                 <div class="social-login-buttons">
                                     <button class="loginBtn loginBtn--facebook">Login with Facebook</button>
                                 </div>
@@ -76,7 +79,7 @@
                             <div class="form-box">
                                 <div class="form-top">
                                     <div class="form-top-left">
-                                        <h3>Sign up now</h3>
+                                        <h3>Sign up to Bloodstreet</h3>
                                     </div>
                                     <div class="form-top-right">
                                         <i class="fa fa-pencil"></i>
@@ -86,35 +89,35 @@
                                     <form role="form" action="" method="post" class="registration-form">
                                         <div class="form-group">
                                             <label class="sr-only" for="form-first-name">First name</label>
-                                            <input type="text" name="form-first-name" placeholder="First name" class="form-first-name form-control"
-                                                id="form-first-name">
+                                            <input type="text" name="form-first-name" placeholder="First name"
+                                                class="form-first-name form-control" id="form-first-name">
                                         </div>
                                         <div class="form-group">
                                             <label class="sr-only" for="form-last-name">Last name</label>
-                                            <input type="text" name="form-last-name" placeholder="Last name" class="form-last-name form-control"
-                                                id="form-last-name">
+                                            <input type="text" name="form-last-name" placeholder="Last name"
+                                                class="form-last-name form-control" id="form-last-name">
                                         </div>
 
                                         <div class="form-group">
                                             <label class="sr-only" for="form-last-name">Username</label>
-                                            <input type="text" name="form-user-name" placeholder="Username" class="form-last-name form-control"
-                                                id="form-user-name">
+                                            <input type="text" name="form-user-name" placeholder="Username"
+                                                class="form-last-name form-control" id="form-user-name">
                                         </div>
 
 
                                         <div class="form-group">
                                             <label class="sr-only" for="form-email">Email</label>
-                                            <input type="text" name="form-email" placeholder="Email" class="form-email form-control"
-                                                id="form-email">
+                                            <input type="text" name="form-email" placeholder="Email"
+                                                class="form-email form-control" id="form-email">
                                         </div>
 
                                         <div class="form-group">
                                             <label class="sr-only" for="form-password">Password</label>
-                                            <input type="password" name="form-password" placeholder="Password" class="form-password form-control"
-                                                id="form-email">
+                                            <input type="password" name="form-password" placeholder="Password"
+                                                class="form-password form-control" id="form-email">
                                         </div>
-                                        <button type="button" class="register-btn btn btn-info">Sign up as donor</button>
-                                        <button type="button" class="register-btn text-white btn button-blood float-right">Sign up as sucker</button>
+                                        <button type="button"
+                                            class="register-btn text-white btn btn-info float-right">Submit</button>
                                 </div>
 
                                 </form>
@@ -154,11 +157,14 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
 
