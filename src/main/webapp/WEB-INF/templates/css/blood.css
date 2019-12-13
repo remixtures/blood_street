@@ -140,6 +140,19 @@ li a:hover{
     margin-bottom: 10px;
 }
 
+.donor-dashboard-review{
+  margin-top: 30px;
+}
+
+.checked{
+  color: orange;
+}
+
+.switch{
+  
+}
+
+
 /* facebook button */
 
 .loginBtn {
