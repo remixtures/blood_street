@@ -2,7 +2,6 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <thymeleaf th:replace="header :: header" />
     <title>BloodStreet</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -55,7 +54,7 @@
                                             <input type="password" name="form-password" placeholder="Password" class="form-password form-control"
                                                 id="form-password">
                                         </div>
-                                        <button type="submit" class="register-btn btn button-blood text-white">Sign in!</button>
+                                        <button type="submit" class="margin-bottom register-btn btn button-blood text-white">Sign in!</button>
                                     </form>
                                 </div>
                             </div>
@@ -109,25 +108,15 @@
                                                 id="form-email">
                                         </div>
 
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
-                                                value="option1" checked>
-                                            <label class="form-check-label" for="exampleRadios1">
-                                                Register as Donor
-                                            </label>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="form-password">Password</label>
+                                            <input type="password" name="form-password" placeholder="password" class="form-password form-control"
+                                                id="form-email">
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
-                                                value="option2">
-                                            <label class="form-check-label" for="exampleRadios2">
-                                                Register as Sucker
-                                            </label>
-                                        </div>
-
+                                        <button type="button" class="register-btn btn btn-info">Sign up as donor</button>
+                                        <button type="button" class="register-btn text-white btn button-blood float-right">Sign up as sucker</button>
                                 </div>
 
-                                <button type="submit" class="register-btn btn button-blood text-white float-right">Sign
-                                    up!</button>
                                 </form>
                             </div>
                         </div>
