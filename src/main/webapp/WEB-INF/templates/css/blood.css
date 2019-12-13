@@ -100,12 +100,18 @@ width: 50%;
   color: orange;
 }
 
-.username, .profile-pic{
+.username{
   margin-top: 40px;
   margin-left: 40px;
 }
-.switch{
+
+.switch {
+  width: 100%;
+  float: none;
+  margin: 0 auto;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .sucker-name{
