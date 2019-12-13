@@ -89,6 +89,9 @@ width: 50%;
 
 }
 
+
+/*  DONOR LANDING PAGE  */
+
 .donor-dashboard-review{
   margin-top: 30px;
 }
@@ -97,9 +100,31 @@ width: 50%;
   color: orange;
 }
 
-.switch{
-  
+.username, .profile-pic{
+  margin-top: 40px;
+  margin-left: 40px;
 }
+.switch{
+  text-align: center;
+}
+
+.sucker-name{
+  color: #920110;
+}
+
+.reply-btn{
+  background-color: #920110 !important;
+}
+
+.profile-pic{
+  text-align: center;
+}
+
+.donor-name{
+  text-align: center;
+}
+
+
 
 
 /* facebook button */
