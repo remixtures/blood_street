@@ -1,9 +1,9 @@
 package org.academiadecodigo.alphabeat.controllers.dto;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import org.academiadecodigo.alphabeat.model.choices.BloodType;
+import org.academiadecodigo.alphabeat.model.choices.Gender;
+
+import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Map;
 
@@ -12,9 +12,33 @@ import java.util.Map;
  */
 public class DonorDto {
 
+
+    @NotNull(message = "Please insert your username")
+    @NotBlank(message = "Please insert your username")
+    @Size(min=3, max = 16, message = "Usernames must be between 3 and 16 characters")
+    @Pattern(regexp = "/w+", message = "Usernames must only contain alphanumeric characters")
+    private String userName;
+
+    @NotNull(message = "Please insert your first name")
+    @NotBlank(message = "Please insert your first name")
+    @Size(min=3, max = 16, message = "Names must be between 3 and 16 characters")
+    @Pattern(regexp = "[A-Z][a-z]{2,15}", message = "Names must only contain letters")
+    private String firstName;
+
+    @NotNull(message = "Please insert your last name")
+    @NotBlank(message = "Please insert your last name")
+    @Size(min=3, max = 16, message = "Names must be between 3 and 16 characters")
+    @Pattern(regexp = "[A-Z][a-z]{2,15}", message = "Names must only contain letters")
+    private String lastName;
+
+    @NotNull(message = "Please choose an option")
+    @NotBlank(message = "Please choose an option")
+    private Gender gender;
+
     @NotNull(message = "Please insert your age")
     @NotBlank(message = "Please insert your age")
-    @Pattern(regexp = "\\s[0-9]{1}[0-9]{0,1}", message = "Please input an age between 0 and ")
+    @Size(min=2, max = 2, message = "Suckers require suitable donors, between the ages of 18 and 99")
+    @Pattern(regexp = "^0?1[89]|0?[2-9][0-9]$", message = "Suckers require suitable donors between the ages of 18 and 99")
     private Integer age;
 
     @NotBlank(message = "Invalid Password")
@@ -22,16 +46,31 @@ public class DonorDto {
     @Size(min=4, max=16, message = "Password must have at least 4 characters, no more than 16")
     private String password;
 
+    @NotNull(message = "Please choose an option")
+    @NotBlank(message = "Please choose an option")
+    private BloodType bloodType;
 
-    private String bloodType;
+    @NotNull(message = "No judgement, but we need to know")
     private boolean hivStatus;
+
+    @NotNull(message = "No judgment, but we need to know")
     private boolean diabetesStatus;
+
+    @NotNull(message = "Please input your weight")
+    @NotBlank(message = "Please input your weight")
+    @Size(min=2, max = 3, message = "Suckers require donors with a weight between 50 and 500kg")
+    @Pattern(regexp = "^0?[5-9][0-9]|0?[1-4][0-9][0-9]$", message = "Suckers require donors with weights between 50 and 500kg")
     private Integer weight;
+
     private List<Integer> ratings;
     private Map<String, Integer> reviews;
+
+    @NotNull(message = "Please let us know if you're currently available to donate")
     private boolean availability;
     private Integer id;
 
+    @Email
+    private String email;
 
     public Integer getAge() {
         return age;
@@ -41,11 +80,11 @@ public class DonorDto {
         this.age = age;
     }
 
-    public String getBloodType() {
+    public BloodType getBloodType() {
         return bloodType;
     }
 
-    public void setBloodType(String bloodType) {
+    public void setBloodType(BloodType bloodType) {
         this.bloodType = bloodType;
     }
 
@@ -111,5 +150,45 @@ public class DonorDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 }

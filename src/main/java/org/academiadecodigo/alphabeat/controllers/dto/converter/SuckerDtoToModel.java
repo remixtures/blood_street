@@ -2,6 +2,8 @@ package org.academiadecodigo.alphabeat.controllers.dto.converter;
 
 import org.academiadecodigo.alphabeat.controllers.dto.SuckerDto;
 import org.academiadecodigo.alphabeat.model.Sucker;
+import org.academiadecodigo.alphabeat.services.SuckerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,9 +12,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class SuckerDtoToModel extends AbstractConverter<SuckerDto, Sucker>{
 
+    private SuckerService suckerService;
+
     public Sucker convert(SuckerDto suckerDto){
 
-        Sucker sucker = new Sucker();
+        Sucker sucker = (suckerDto.getId() != null ?
+                suckerService.getSucker(suckerDto.getId()) : new Sucker());
+
+        sucker.setUserName(suckerDto.getUserName());
+        sucker.setFirstName(suckerDto.getFirstName());
+        sucker.setLastName(suckerDto.getLastName());
+        sucker.setGender(suckerDto.getGender());
 
         sucker.setPassword(suckerDto.getPassword());
         sucker.setFavBloodType(suckerDto.getFavBloodType());
@@ -20,5 +30,10 @@ public class SuckerDtoToModel extends AbstractConverter<SuckerDto, Sucker>{
         sucker.setNumberOfRatings(suckerDto.getNumberOfRatings());
 
         return sucker;
+    }
+
+    @Autowired
+    public void setSuckerService(SuckerService suckerService) {
+        this.suckerService = suckerService;
     }
 }

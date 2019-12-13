@@ -1,5 +1,8 @@
 package org.academiadecodigo.alphabeat.model;
 
+import org.academiadecodigo.alphabeat.model.choices.BloodType;
+import org.academiadecodigo.alphabeat.model.choices.Gender;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,9 +11,14 @@ import java.util.List;
  */
 public class Sucker extends AbstractModel {
 
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private Gender gender;
+
     private String password;
     private List<Donor> favoriteDonors;
-    private String favBloodType;
+    private BloodType favBloodType;
     private String email;
     private Integer numberOfRatings;
 
@@ -38,11 +46,11 @@ public class Sucker extends AbstractModel {
         favoriteDonors.remove(donor);
     }
 
-    public String getFavBloodType() {
+    public BloodType getFavBloodType() {
         return favBloodType;
     }
 
-    public void setFavBloodType(String favBloodType) {
+    public void setFavBloodType(BloodType favBloodType) {
         this.favBloodType = favBloodType;
     }
 
@@ -68,5 +76,37 @@ public class Sucker extends AbstractModel {
 
     public void setNumberOfRatings(Integer numberOfRatings){
         this.numberOfRatings = numberOfRatings;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 }

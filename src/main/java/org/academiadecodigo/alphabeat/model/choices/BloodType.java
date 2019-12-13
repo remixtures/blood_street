@@ -1,4 +1,4 @@
-package org.academiadecodigo.alphabeat.model;
+package org.academiadecodigo.alphabeat.model.choices;
 
 /**
  * Created by codecadet on 13/12/2019.
@@ -18,5 +18,5 @@ public enum BloodType {
     }
 
     private String name;
-    
+
 }

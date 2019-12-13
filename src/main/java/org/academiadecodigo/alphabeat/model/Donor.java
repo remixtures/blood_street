@@ -1,5 +1,8 @@
 package org.academiadecodigo.alphabeat.model;
 
+import org.academiadecodigo.alphabeat.model.choices.BloodType;
+import org.academiadecodigo.alphabeat.model.choices.Gender;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -10,15 +13,21 @@ import java.util.Map;
  */
 public class Donor extends AbstractModel{
 
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private Gender gender;
+
     private Integer age;
     private String password;
-    private String bloodType;
+    private BloodType bloodType;
     private boolean hivStatus;
     private boolean diabetesStatus;
     private Integer weight;
     private List<Integer> ratings;
     private Map<String, Integer> reviews;
     private boolean availability;
+    private String email;
 
     public Donor(){
         ratings = new ArrayList<>();
@@ -34,11 +43,11 @@ public class Donor extends AbstractModel{
         this.age = age;
     }
 
-    public String getBloodType() {
+    public BloodType getBloodType() {
         return bloodType;
     }
 
-    public void setBloodType(String bloodType) {
+    public void setBloodType(BloodType bloodType) {
         this.bloodType = bloodType;
     }
 
@@ -96,5 +105,45 @@ public class Donor extends AbstractModel{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 }
