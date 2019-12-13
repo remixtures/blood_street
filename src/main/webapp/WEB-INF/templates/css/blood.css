@@ -12,6 +12,23 @@
     margin-bottom: 50px;
 }
 
+.donor{
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+
+.top5link a{
+  text-decoration: none;
+  color: #5B7BD5;
+}
+
+.top5link a:hover{
+  text-decoration: none;
+  color: #3B55A0;
+}
+
 .donorheader{
 
   height: 350px;
@@ -183,6 +200,10 @@ li a:hover{
 
 .margin-bottom{
     margin-bottom: 10px;
+}
+
+.marginall{
+  margin: 25px;
 }
 
 

@@ -35,49 +35,89 @@
             <div class="row text-center">
                 <div class="col">
                     <h3 class="borderbottom">Top 5 Donors</h3>
-                    <div class="progress margin-top-bottom">
+                    <div class="donor text-left">
+                        <a href="" class="top5link">
+                            <h6>Donor name</h6>
+                        </a>
+                    </div>
+                    <div class="progress margin-bottom">
                         <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="progress margin-top-bottom">
+                    <div class="donor text-left">
+                        <a href="" class="top5link">
+                            <h6>Donor name</h6>
+                        </a>
+                    </div>
+                    <div class="progress margin-bottom">
                         <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="progress margin-top-bottom">
+                    <div class="donor text-left">
+                        <a href="" class="top5link">
+                            <h6>Donor name</h6>
+                        </a>
+                    </div>
+                    <div class="progress margin-bottom">
                         <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="progress margin-top-bottom">
+                    <div class="donor text-left">
+                        <a href="" class="top5link">
+                            <h6>Donor name</h6>
+                        </a>
+                    </div>
+                    <div class="progress margin-bottom">
                         <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <div class="progress margin-top-bottom">
+                    <div class="donor text-left">
+                        <a href="" class="top5link">
+                            <h6>Donor name</h6>
+                        </a>
+                    </div>
+                    <div class="progress margin-bottom">
                         <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5%"
                             aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
                 <div class="col">
                     <h3 class="borderbottom">Top 5 Suckers</h3>
-                    <div class="progress margin-top-bottom">
-                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="100"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="progress margin-top-bottom">
-                            <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="75"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="progress margin-top-bottom">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="50"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="progress margin-top-bottom">
-                            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="progress margin-top-bottom">
-                            <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5%"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
+                    <div class="donor text-left">
+                        <h6>Sucker name</h6>
+                    </div>
+                    <div class="progress margin-bottom">
+                        <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="100"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="donor text-left">
+                        <h6>Sucker name</h6>
+                    </div>
+                    <div class="progress margin-bottom">
+                        <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="75"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="donor text-left">
+                        <h6>Sucker name</h6>
+                    </div>
+                    <div class="progress margin-bottom">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="50"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="donor text-left">
+                        <h6>Sucker name</h6>
+                    </div>
+                    <div class="progress margin-bottom">
+                        <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="donor text-left">
+                        <h6>Sucker name</h6>
+                    </div>
+                    <div class="progress margin-bottom">
+                        <div class="progress-bar" role="progressbar" style="width: 5%" aria-valuenow="5%"
+                            aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -136,9 +176,12 @@
                 var map = new google.maps.Map(
                     document.getElementById('map'), { zoom: 15, center: c });
                 // The marker, positioned at Uluru
-                var marker = new google.maps.Marker({ position: uluru, map: map });
-                var marker = new google.maps.Marker({ position: c, map: map });
-                var marker = new google.maps.Marker({ position: b, map: map });
+                var marker = new google.maps.Marker({ position: uluru, map: map, icon: image });
+                var marker = new google.maps.Marker({ position: c, map: map, icon: image });
+                var marker = new google.maps.Marker({ position: b, map: map, icon: image });
+
+                var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+
             }
         </script>
         <script async defer
