@@ -15,104 +15,167 @@
 
 <body>
 
-    <div class="container-fluid navigation">
-        <div>
-            <img class="logo" src="resources/logo.png" />
+    <div class="container-header">
+        <div class="container-fluid navigation">
+            <div class="container-fluid navigation">
+                <div>
+                    <img class="logo" src="resources/logo-letters.png" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">login</a></li>
+                        <li><a href="#">sign in</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
+        <div class="donorheader"></div>
 
-    <div class="container">
-        <div class="text-center">
-            <img src="resources/default-80x80.png" class="img img-rounded img-fluid" />
+        <div class="container">
+            <div class="text-center">
+                <img src="resources/default-80x80.png" class="img img-rounded img-fluid" />
+            </div>
+
+            <div class="content">
+                <h1>Donor name</h1>
+            </div class="margin-top-bottom">
+            <button type="button" class="btn btn-success"></button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="card marginall" style=" width: 18rem;">
+                    <div class="card-body">
+                        
+                        <div class="rating-block">
+                            <h4>Average user rating</h4>
+                            <h2 class="bold padding-bottom-7">4 <small>/ 5</small></h2>
+                            <br>
+                        <br>
+                            <p>
+                                <span class="float-right"><i class="fa fa-star unchecked" id="one"></i></span>
+                                <span class="float-right"><i class="fa fa-star checked" id="two"></i></span>
+                                <span class="float-right"><i class="fa fa-star checked" id="three"></i></span>
+                                <span class="float-right"><i class="fa fa-star checked" id="four"></i></span>
+                                <span class="float-right"><i class="fa fa-star checked" id="five"></i></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card marginall" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Blood Type</h5>
+                        <h1 class="card-text text-center" style="font-size: 7em; color:#354C8C ">A <sup>+</sup></h1>
+                    </div>
+                </div>
+
+                <div class="card marginall" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Health</h5>
+                        <button type="button" class="register-btn text-white btn button-blood float-right">Not diabetic</button>
+                        <button type="button" class="register-btn text-white btn button-blood float-right">HIV Negative</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="content">
-            <h1>Donor name</h1>
-        </div class="margin-top-bottom">
-        <button type="button" class="btn btn-success"></button>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="card marginall" style=" width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Avg Rating</h5>
-                    <div class="rating-block">
-                        <h4>Average user rating</h4>
-                        <h2 class="bold padding-bottom-7">4 <small>/ 5</small></h2>
-                        <button type="button" class="btn btn-warning btn-sm">
-                            <span class="glyphicon glyphicon-star"></span>
-                        </button>
-                        <button type="button" class="btn btn-warning btn-sm">
-                            <span class="glyphicon glyphicon-star"></span>
-                        </button>
-                        <button type="button" class="btn btn-warning btn-sm">
-                            <span class="glyphicon glyphicon-star"></span>
-                        </button>
-                        <button type="button" class="btn btn-default btn-grey btn-sm">
-                            <span class="glyphicon glyphicon-star"></span>
-                        </button>
-                        <button type="button" class="btn btn-default btn-grey btn-sm">
-                            <span class="glyphicon glyphicon-star"></span>
-                        </button>
+        <div class="container">
+            <h3 style="text-align:left">Recent Reviews</h3>
+                <div class="card donor-dashboard-review">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="resources/vampireShot.jpg" class="img img-rounded img-fluid" />
+                                <p class="text-secondary text-center">December 12, 2019</p>
+                            </div>
+                            <div class="col-md-10">
+                                <p>
+                                    <a class="sucker-name float-left" href=""><strong>sucker_42069</strong></a>
+                                    <span class="float-right"><i class="fa fa-star unchecked" id="one"></i></span>
+                                    <span class="float-right"><i class="fa fa-star checked" id="two"></i></span>
+                                    <span class="float-right"><i class="fa fa-star checked" id="three"></i></span>
+                                    <span class="float-right"><i class="fa fa-star checked" id="four"></i></span>
+                                    <span class="float-right"><i class="fa fa-star checked" id="five"></i></span>
+                                </p>
+                                <div class="clearfix"></div>
+                                <p>Lorem Ipsum is simply dummy text of the pr make but also the leap into electronic
+                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <hr>
+                                <p>
+                                    <a class="reply-btn float-right btn text-white btn-danger">Reply</a>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card marginall" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Blood Type</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+            <div class="container">
+                    <div class="card donor-dashboard-review">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <img src="resources/vampireShot.jpg" class="img img-rounded img-fluid" />
+                                    <p class="text-secondary text-center">December 12, 2019</p>
+                                </div>
+                                <div class="col-md-10">
+                                    <p>
+                                        <a class="sucker-name float-left" href=""><strong>sucker_42069</strong></a>
+                                        <span class="float-right"><i class="fa fa-star checked" id="one"></i></span>
+                                        <span class="float-right"><i class="fa fa-star checked" id="two"></i></span>
+                                        <span class="float-right"><i class="fa fa-star checked" id="three"></i></span>
+                                        <span class="float-right"><i class="fa fa-star checked" id="four"></i></span>
+                                        <span class="float-right"><i class="fa fa-star checked" id="five"></i></span>
+                                    </p>
+                                    <div class="clearfix"></div>
+                                    <p>Lorem Ipsum is simply dummy text of the pr make but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                        release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                        desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <hr>
+                                    <p>
+                                        <a class="reply-btn float-right btn text-white btn-danger">Reply</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card marginall" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Diabetic</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                <div class="container">
+                        <div class="card donor-dashboard-review">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <img src="resources/vampireShot.jpg" class="img img-rounded img-fluid" />
+                                        <p class="text-secondary text-center">December 12, 2019</p>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <p>
+                                            <a class="sucker-name float-left" href=""><strong>sucker_42069</strong></a>
+                                            <span class="float-right"><i class="fa fa-star unchecked" id="one"></i></span>
+                                            <span class="float-right"><i class="fa fa-star checked" id="two"></i></span>
+                                            <span class="float-right"><i class="fa fa-star checked" id="three"></i></span>
+                                            <span class="float-right"><i class="fa fa-star checked" id="four"></i></span>
+                                            <span class="float-right"><i class="fa fa-star checked" id="five"></i></span>
+                                        </p>
+                                        <div class="clearfix"></div>
+                                        <p>Lorem Ipsum is simply dummy text of the pr make but also the leap into electronic
+                                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                            release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        <hr>
+                                        <p>
+                                            <a class="reply-btn float-right btn text-white btn-danger">Reply</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-2">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                        aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                        aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                        aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                        aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-            </div>
-            <div class="col-2">
-                <div class="progress">
-                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
-                        aria-valuemin="0" aria-valuemax="100">25%</div>
-                </div>
-            </div>
-        </div>
 
 
     </div>
