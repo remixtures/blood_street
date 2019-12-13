@@ -89,6 +89,14 @@ width: 50%;
 
 }
 
+.donor-dashboard-review{
+  margin-top: 30px;
+}
+
+.checked{
+  color: orange;
+}
+
 /* facebook button */
 
 .loginBtn {
